@@ -1,8 +1,3 @@
-/**
- * @author - Naveed Edalati, Seena Rowhani
- * @description - sound sensor digital state toggle
- *  e.g to address different lights w/ clap seq.
- */
 const byte SOUND_IN = 2; // define D0 Sensor Interface
 const byte MAX_RELAYS = 3;
 const byte RELAY_CURSOR = 3; // pin to start relay group from
