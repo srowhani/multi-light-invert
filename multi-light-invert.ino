@@ -28,7 +28,6 @@ void loop ()
   if (dr == HIGH && isReady) {
     if (t_start == -1)
       t_start = millis();
-    // Serial.println("dr == HIGH && isReady");
     mReference++;
     delay(READ_DELAY);
   }
@@ -47,8 +46,6 @@ void loop ()
 void timer_cb (int r) {
   int index = r - 1;
   mStates[index] = !mStates[index]; //invert relay
-  // Serial.print("PIN: ");
-  // Serial.println(RELAY_CURSOR + index);
   digitalWrite(RELAY_CURSOR + index, mStates[index] ? HIGH : LOW);
 }
 
